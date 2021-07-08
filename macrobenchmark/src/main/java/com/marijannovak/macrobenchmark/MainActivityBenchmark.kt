@@ -19,13 +19,14 @@ class MainActivityBenchmark {
     fun startup() = benchmarkRule.measureRepeated(
         packageName = "com.marijannovak.macrobenchmarktest",
         metrics = listOf(StartupTimingMetric()),
-        iterations = 5,
+        iterations = 3,
         startupMode = StartupMode.COLD
     ) {
         pressHome()
-        val intent = Intent()
-        intent.setPackage("com.marijannovak.macrobenchmarktest")
-        intent.setAction("com.marijannovak.macrobenchmarktest.MAIN")
+        val intent = Intent().apply {
+            setPackage("com.marijannovak.macrobenchmarktest")
+            setAction("com.marijannovak.macrobenchmarktest.MAIN")
+        }
         startActivityAndWait(intent)
     }
 }
