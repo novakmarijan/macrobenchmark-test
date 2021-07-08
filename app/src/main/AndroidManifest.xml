@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.marijannovak.macrobenchmarktest">
+    package="com.marijannovak.macrobenchmarktest" >
 
     <application
         android:allowBackup="false"
@@ -8,20 +8,33 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MacrobenchmarkTest">
+        android:theme="@style/Theme.MacrobenchmarkTest" >
 
-        <!--suppress AndroidElementNotAllowed -->
-        <profileable android:shell="true"/>
-        
+        <!-- suppress AndroidElementNotAllowed -->
+        <profileable android:shell="true" />
+
         <activity
-            android:name=".MainActivity"
+            android:name=".LightStartupActivity"
             android:exported="true">
+
+            <intent-filter>
+                <action android:name="com.marijannovak.macrobenchmarktest.LIGHT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".HeavyStartupActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <intent-filter>
-                <action android:name="com.marijannovak.macrobenchmarktest.MAIN" />
+                <action android:name="com.marijannovak.macrobenchmarktest.HEAVY" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
