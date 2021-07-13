@@ -17,8 +17,8 @@ class StartupBenchmark {
 
     companion object {
         const val PACKAGE_NAME = "com.marijannovak.macrobenchmarktest"
-        const val HEAVY_ACTIVITY = "HEAVY"
-        const val LIGHT_ACTIVITY = "LIGHT"
+        const val HEAVY_ACTIVITY = "HEAVY_STARTUP"
+        const val LIGHT_ACTIVITY = "LIGHT_STARTUP"
     }
 
     @Test
