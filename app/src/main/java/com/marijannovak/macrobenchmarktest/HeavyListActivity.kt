@@ -26,9 +26,7 @@ class HeavyListAdapter : RecyclerView.Adapter<HeavyListAdapter.HeavyViewHolder>(
         return HeavyViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: HeavyViewHolder, position: Int) {
-        holder.bind()
-    }
+    override fun onBindViewHolder(holder: HeavyViewHolder, position: Int) = holder.bind()
 
     override fun getItemCount(): Int = 300
 

@@ -25,9 +25,7 @@ class LightListAdapter : RecyclerView.Adapter<LightListAdapter.LightViewHolder>(
         return LightViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: LightViewHolder, position: Int) {
-        holder.bind()
-    }
+    override fun onBindViewHolder(holder: LightViewHolder, position: Int) = holder.bind()
 
     override fun getItemCount(): Int = 300
 
