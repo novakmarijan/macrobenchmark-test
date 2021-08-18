@@ -16,30 +16,15 @@
         <activity
             android:name=".LightListActivity"
             android:exported="true" >
-            <intent-filter>
-                <action android:name="com.marijannovak.macrobenchmarktest.LIGHT_LIST" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".HeavyListActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="com.marijannovak.macrobenchmarktest.HEAVY_LIST" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
         </activity>
 
         <activity
             android:name=".LightStartupActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="com.marijannovak.macrobenchmarktest.LIGHT_STARTUP" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".HeavyStartupActivity"
@@ -48,11 +33,6 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="com.marijannovak.macrobenchmarktest.HEAVY_STARTUP" />
-
-                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
     </application>

@@ -21,8 +21,8 @@ class JankBenchmark {
 
     companion object {
         const val PACKAGE_NAME = "com.marijannovak.macrobenchmarktest"
-        const val HEAVY_ACTIVITY = "HEAVY_LIST"
-        const val LIGHT_ACTIVITY = "LIGHT_LIST"
+        const val HEAVY_ACTIVITY = "HeavyListActivity"
+        const val LIGHT_ACTIVITY = "LightListActivity"
         const val LIST_ID = "recycler"
     }
 
@@ -44,7 +44,7 @@ class JankBenchmark {
             setupBlock = {
                 // Action to run specific activity
                 val intent = Intent().apply {
-                    action = "${PACKAGE_NAME}.$activity"
+                    setClassName(PACKAGE_NAME, "$PACKAGE_NAME.$activity")
                 }
 
                 // Run the activity and wait for it to become idle

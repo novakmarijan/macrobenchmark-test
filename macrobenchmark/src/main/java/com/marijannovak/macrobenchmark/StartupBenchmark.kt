@@ -17,8 +17,8 @@ class StartupBenchmark {
 
     companion object {
         const val PACKAGE_NAME = "com.marijannovak.macrobenchmarktest"
-        const val HEAVY_ACTIVITY = "HEAVY_STARTUP"
-        const val LIGHT_ACTIVITY = "LIGHT_STARTUP"
+        const val HEAVY_ACTIVITY = "HeavyStartupActivity"
+        const val LIGHT_ACTIVITY = "LightStartupActivity"
     }
 
     @Test
@@ -53,7 +53,7 @@ class StartupBenchmark {
 
         // Action to run specific activity
         val intent = Intent().apply {
-            action = "$PACKAGE_NAME.$activity"
+            setClassName(PACKAGE_NAME, "$PACKAGE_NAME.$activity")
         }
 
         // Run the activity and wait for it to become idle
